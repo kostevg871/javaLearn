@@ -6,6 +6,9 @@ public class loop {
         while (i <= 1000) {
             System.out.println(i);
             i++;
+            if (i == 5) {
+                break;
+            }
         }
     }
 }
