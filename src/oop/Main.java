@@ -18,5 +18,33 @@ public class Main {
         double volumeBox3 = box3.height * box3.width * box3.length;
         double volume = myBox.height * myBox.width * myBox.length;
         System.out.println("volume1: " + volume + "\nvolumeBox2: " + volumeBox2 + "\nvolumeBox3: " + volumeBox3);
+
+        Human human1 = new Human();
+        human1.name = "Boris";
+        human1.age = 21;
+        human1.weight = 86;
+
+        Human human2 = new Human();
+        human2.name = "Leora";
+        human2.age = 25;
+        human2.weight = 85;
+
+        Human human3 = new Human();
+        human3.name = "Nik";
+        human3.age = 57;
+        human3.weight = 100;
+
+        Human human4 = new Human();
+        human4.name = "Tanya";
+        human4.age = 23;
+        human4.weight = 75;
+
+        Human human5 = new Human();
+        human5.name = "Albert";
+        human5.age = 55;
+        human5.weight = 68;
+
+        double averageValue = (human1.age + human2.age + human3.age + human4.age + human5.age)/(double)5;
+        System.out.println(averageValue);
     }
 }
