@@ -1,6 +1,6 @@
 package space;
 
-public class HomeWork_if_else {
+public class homework_if_else {
     public static void main(String[] args) {
         String nameMonth = "september";
         if (nameMonth.equals("january")||nameMonth.equals("february")||nameMonth.equals("december")){
