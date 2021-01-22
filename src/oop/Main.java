@@ -2,6 +2,7 @@ package oop;
 
 public class Main {
     public static void main(String[] args) {
+        // OOP lessons
         Box myBox = new Box();
         myBox.height = 10.2;
         myBox.length = 15;
@@ -19,6 +20,7 @@ public class Main {
         double volume = myBox.height * myBox.width * myBox.length;
         System.out.println("volume1: " + volume + "\nvolumeBox2: " + volumeBox2 + "\nvolumeBox3: " + volumeBox3);
 
+        // HomeWork in OOP
         Human human1 = new Human();
         human1.name = "Boris";
         human1.age = 21;
@@ -44,7 +46,22 @@ public class Main {
         human5.age = 55;
         human5.weight = 68;
 
-        double averageValue = (human1.age + human2.age + human3.age + human4.age + human5.age)/(double)5;
-        System.out.println(averageValue);
+        double averageValue = (human1.age + human2.age + human3.age + human4.age + human5.age) / (double) 5;
+        System.out.println("All Human average value age: " + averageValue);
+
+        //Method lessons
+        Box boxMethod1 = new Box();
+        Box boxMethod2 = new Box();
+        boxMethod1.length = 5;
+        boxMethod1.height = 5;
+        boxMethod1.width = 5;
+        boxMethod2.length = 10;
+        boxMethod2.width = 10;
+        boxMethod2.height = 10;
+        boxMethod1.showVolume("boxMethod 1: ");
+        boxMethod2.showVolume("boxMethod 2: ");
+        double volumeMethod1 = boxMethod1.returnVolume();
+        double volumeMethod2 = boxMethod2.returnVolume();
+        System.out.println("Result method returnVolume: " + volumeMethod1 + "  " + volumeMethod2);
     }
 }
