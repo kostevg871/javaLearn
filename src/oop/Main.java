@@ -67,7 +67,15 @@ public class Main {
 
         // Lessons param methods
         Box boxParam = new Box();
-        boxParam.setDimens(20,20,20);
+        boxParam.setDimens(20, 20, 20);
         System.out.println(boxParam.returnVolume());
+
+        //Constructor lessons
+        Box boxConstructor = new Box();
+        System.out.println("Constructor: " + boxConstructor.returnVolume());
+
+        //Param constructor
+        Box boxPC = new Box(10,10,10);
+        System.out.println("Param Constructor: " + boxPC.returnVolume());
     }
 }
