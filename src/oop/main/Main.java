@@ -1,63 +1,66 @@
-package oop;
+package oop.main;
+
+import oop.box.Box;
+import oop.test.Human;
 
 public class Main {
     public static void main(String[] args) {
         // OOP lessons
         Box myBox = new Box();
-        myBox.height = 10.2;
-        myBox.length = 15;
-        myBox.width = 11.3;
+        myBox.setHeight(10.2);
+        myBox.setLength(15);
+        myBox.setWidth(11.3);
         Box box2 = new Box();
         Box box3 = new Box();
-        box2.height = 20;
-        box2.length = 30;
-        box2.width = 15;
-        box3.height = 30;
-        box3.width = 30;
-        box3.length = 30;
-        double volumeBox2 = box2.height * box2.length * box2.width;
-        double volumeBox3 = box3.height * box3.width * box3.length;
-        double volume = myBox.height * myBox.width * myBox.length;
+        box2.setHeight(20);
+        box2.setLength(30);
+        box2.setWidth(15);
+        box3.setHeight(30);
+        box3.setWidth(30);
+        box3.setLength(30);
+        double volumeBox2 = box2.getHeight() * box2.getLength() * box2.getWidth();
+        double volumeBox3 = box3.getHeight() * box3.getWidth() * box3.getLength();
+        double volume = myBox.getHeight() * myBox.getWidth() * myBox.getLength();
         System.out.println("volume1: " + volume + "\nvolumeBox2: " + volumeBox2 + "\nvolumeBox3: " + volumeBox3);
 
         // HomeWork in OOP
         Human human1 = new Human();
-        human1.name = "Boris";
-        human1.age = 21;
-        human1.weight = 86;
+        human1.setName("Boris");
+        human1.setAge(21);
+        human1.setWeight(86);
 
         Human human2 = new Human();
-        human2.name = "Leora";
-        human2.age = 25;
-        human2.weight = 85;
+        human2.setName("Leora");
+        human2.setAge(25);
+        human2.setWeight(85);
 
         Human human3 = new Human();
-        human3.name = "Nik";
-        human3.age = 57;
-        human3.weight = 100;
+        human3.setName("Nik");
+        human3.setAge(57);
+        human3.setWeight(100);
 
         Human human4 = new Human();
-        human4.name = "Tanya";
-        human4.age = 23;
-        human4.weight = 75;
+        human4.setName("Tanya");
+        human4.setAge(23);
+        human4.setWeight(75);
 
         Human human5 = new Human();
-        human5.name = "Albert";
-        human5.age = 55;
-        human5.weight = 68;
+        human5.setName("Albert");
+        human5.setAge(55);
+        human5.setWeight(68);
 
-        double averageValue = (human1.age + human2.age + human3.age + human4.age + human5.age) / (double) 5;
+        double averageValue = (human1.getAge() + human2.getAge() + human3.getAge() + human4.getAge() + human5.getAge()) / (double) 5;
         System.out.println("All Human average value age: " + averageValue);
 
         //Method lessons
         Box boxMethod1 = new Box();
         Box boxMethod2 = new Box();
-        boxMethod1.length = 5;
-        boxMethod1.height = 5;
-        boxMethod1.width = 5;
-        boxMethod2.length = 10;
-        boxMethod2.width = 10;
-        boxMethod2.height = 10;
+        boxMethod1.setLength(5);
+        boxMethod1.setHeight(5);
+        boxMethod1.setWidth(5); 
+        boxMethod2.setLength(10);
+        boxMethod2.setWidth(10);
+        boxMethod2.setHeight(10);
         boxMethod1.showVolume("boxMethod 1: ");
         boxMethod2.showVolume("boxMethod 2: ");
         double volumeMethod1 = boxMethod1.returnVolume();

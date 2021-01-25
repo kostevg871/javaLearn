@@ -1,20 +1,44 @@
-package oop;
+package oop.box;
 
 public class Box {
-    double width;
-    double height;
-    double length;
+    private double width;
+    private double height;
+    private double length;
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
 
     // Constructor lessons
     // Create constructor
-    Box() {
-        width = 0;
-        height = 0;
-        length = 0;
+    public Box() {
+        this.width = 0;
+        this.height = 0;
+        this.length = 0;
     }
 
     // Overload constructor
-    Box(double size) {
+    public Box(double size) {
         this.height = size;
         this.width = size;
         this.length = size;
@@ -22,7 +46,7 @@ public class Box {
 
 
     // Obj in param
-    Box(Box box) {
+    public Box(Box box) {
         this.width = box.width;
         this.height = box.height;
         this.length = box.length;
@@ -35,30 +59,30 @@ public class Box {
         this.length = length;
     }
 
-    void setDimens(double width, double height, double length) {
+    public void setDimens(double width, double height, double length) {
         this.width = width;
         this.height = height;
         this.length = length;
     }
 
-    Box increase(int i) {
+    public Box increase(int i) {
         return new Box(width * i, height * i, length * i);
     }
 
     // Method lessons
-    void showVolume(String nameBox) {
+    public void showVolume(String nameBox) {
         double volume = returnVolume();
         System.out.println(nameBox + volume);
     }
 
-    double returnVolume() {
+    public double returnVolume() {
         return width * height * length;
     }
 
 
     // objects - param and return obj
     // var compare method
-    int compare(Box box) {
+    public int compare(Box box) {
         double thisVolume = returnVolume();
         double boxVolume = box.returnVolume();
         int result;
