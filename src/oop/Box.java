@@ -5,6 +5,12 @@ public class Box {
     double height;
     double length;
 
+    void setDimens(double width, double height, double length){
+        this.width = width;
+        this.height = height;
+        this.length = length;
+    }
+
     // Method lessons
     void showVolume(String nameBox) {
         double volume = width * height * length;

@@ -63,5 +63,11 @@ public class Main {
         double volumeMethod1 = boxMethod1.returnVolume();
         double volumeMethod2 = boxMethod2.returnVolume();
         System.out.println("Result method returnVolume: " + volumeMethod1 + "  " + volumeMethod2);
+
+
+        // Lessons param methods
+        Box boxParam = new Box();
+        boxParam.setDimens(20,20,20);
+        System.out.println(boxParam.returnVolume());
     }
 }
