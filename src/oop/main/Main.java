@@ -2,6 +2,7 @@ package oop.main;
 
 import oop.box.Box;
 import oop.test.Human;
+import oop.test.MyMath;
 
 public class Main {
     public static void main(String[] args) {
@@ -57,7 +58,7 @@ public class Main {
         Box boxMethod2 = new Box();
         boxMethod1.setLength(5);
         boxMethod1.setHeight(5);
-        boxMethod1.setWidth(5); 
+        boxMethod1.setWidth(5);
         boxMethod2.setLength(10);
         boxMethod2.setWidth(10);
         boxMethod2.setHeight(10);
@@ -111,5 +112,10 @@ public class Main {
 
         boxParam1.showVolume("boxParam1: ");
         boxParam3.showVolume("BoxParam3: ");
+        System.out.println(MyMath.square(20));
+        System.out.println(MyMath.length(10));
+        System.out.println(MyMath.area(10));
+        System.out.println(MyMath.sum());
+
     }
 }
