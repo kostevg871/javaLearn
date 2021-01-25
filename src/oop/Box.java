@@ -8,9 +8,15 @@ public class Box {
     // Constructor lessons
     // Create constructor
     Box() {
-        width = 10;
-        height = 10;
-        length = 10;
+        width = 0;
+        height = 0;
+        length = 0;
+    }
+
+    Box(double size){
+        this.height=size;
+        this.width = size;
+        this.length = size;
     }
 
     // Create param constructor
@@ -28,7 +34,7 @@ public class Box {
 
     // Method lessons
     void showVolume(String nameBox) {
-        double volume = width * height * length;
+        double volume = returnVolume();
         System.out.println(nameBox + volume);
     }
 

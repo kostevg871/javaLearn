@@ -77,5 +77,9 @@ public class Main {
         //Param constructor
         Box boxPC = new Box(10,10,10);
         System.out.println("Param Constructor: " + boxPC.returnVolume());
+
+        // Overload const
+        Box boxConstOverload = new Box(10);
+        boxConstOverload.showVolume("boxConstOverload ");
     }
 }
