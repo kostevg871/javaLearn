@@ -75,11 +75,38 @@ public class Main {
         System.out.println("Constructor: " + boxConstructor.returnVolume());
 
         //Param constructor
-        Box boxPC = new Box(10,10,10);
+        Box boxPC = new Box(10, 12, 10);
         System.out.println("Param Constructor: " + boxPC.returnVolume());
 
         // Overload const
-        Box boxConstOverload = new Box(10);
+        Box boxConstOverload = new Box(33);
         boxConstOverload.showVolume("boxConstOverload ");
+
+        // Object
+        int result = boxConstOverload.compare(boxPC);
+        // method compare
+        switch (result) {
+            case -1 -> System.out.println("our box less");
+            case 0 -> System.out.println("our box equal");
+            case 1 -> System.out.println("our box more");
+        }
+
+        // Obj param construct
+        Box boxParam1 = new Box(10);
+        Box boxParam2 = new Box(boxParam1);
+
+        boxParam1.setDimens(10,10,10);
+
+        Box boxParam3 = boxParam1.increase(2);
+
+        int resultParam = boxParam1.compare(boxParam2);
+        switch (resultParam) {
+            case -1 -> System.out.println("our box less");
+            case 0 -> System.out.println("our box equal");
+            case 1 -> System.out.println("our box more");
+        }
+
+        boxParam1.showVolume("boxParam1: ");
+        boxParam3.showVolume("BoxParam3: ");
     }
 }
